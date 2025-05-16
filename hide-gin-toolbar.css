@@ -1,0 +1,29 @@
+/* For Drupal users: hide Gin toolbar */
+
+/* 1. Reset --gin-toolbar-* custom properties */
+:root {
+  --gin-toolbar-height: 0px !important;
+  --gin-toolbar-secondary-height: 0px !important;
+  --gin-toolbar-x-offset: 0px !important;
+  --gin-toolbar-y-offset: 0px !important;
+  --drupal-displace-offset-left: 0px !important;
+  --drupal-displace-offset-top: 0px !important;
+}
+
+/* 2. Remove padding and margin related to the toolbar position */
+body[class*="toolbar"],
+html[class*="toolbar"] {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 3. Hide Gin toolbar */
+#toolbar-administration,
+#admin-toolbar {
+  display: none !important;
+}
+
+/* 4. Bonus: also hide the contextual divisions */
+.contextual-region .contextual {
+  display: none !important;
+}
